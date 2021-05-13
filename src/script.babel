@@ -1,0 +1,53 @@
+import * as ReactDOM from "https://cdn.skypack.dev/react-dom@17.0.1";
+import * as React from "https://cdn.skypack.dev/react@17.0.1";
+
+const QUOTESLIST = [
+  {quote:"Maple Syrup is tasty", author:"WiseCanadian"},
+  {quote:"Maple Syrup is sticky", author:"StupidCanadian"},
+  {quote:"Maple Syrup is ugly", author:"RedneckCanadian"},
+]
+
+const QuoteText = (props) => {
+  return (
+    <div id="quote-text">
+      <span id="text">{props.text}</span>
+    </div>
+  )
+}
+
+const QuoteAuthor = (props) => {
+  return (
+   <div id="quote-author">
+     <span id="author">- {props.author}</span>
+   </div>   
+  )
+}
+
+const QuoteBoxBottom = (props) => {
+  return (
+    <div class="buttons">
+<a class="button" id="tweet-quote" title="Tweet this quote!" target="_top" href="https://twitter.com/intent/tweet">
+        Tweet
+      </a>
+      <button id="new-quote" onClick={props.newQuote}>New Quote</button>
+    </div> 
+  )
+}
+
+const App = () => {
+  const [quote, setQuote] = React.useState(QUOTESLIST[0]);
+  const handleOnClick = () => {
+    const rnd = Math.floor(Math.random() * 3);
+    setQuote(QUOTESLIST[rnd]);
+  }
+  return (
+    <div id="quote-box">
+      <QuoteText text={quote.quote}/>
+      <QuoteAuthor author={quote.author}/>
+      <QuoteBoxBottom newQuote={handleOnClick}/>
+    </div>
+  ) 
+}
+
+ReactDOM.render(<App/>, document.getElementById("wrapper"))
+
