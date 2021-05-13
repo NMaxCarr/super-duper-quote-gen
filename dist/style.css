@@ -1,0 +1,99 @@
+body {
+  display: grid;
+  place-content: center;
+  padding: none;
+  margin: none;
+  background-color: rgb(44, 62, 80);
+  height: 100vh;
+}
+
+#quote-box {
+    border-radius: 3px;
+    position: relative;
+    width: 450px;
+    padding: 40px 50px;
+    display: table;
+    background-color: #fff;
+}
+
+#quote-text {
+    font-family: "Raleway", sans-serif;
+    color: rgb(44, 62, 80);
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    vertical-align: baseline;
+    position: relative;
+    z-index: 2;
+    text-align: center;
+    width: 450px;
+    height: auto;
+    clear: both;
+    font-weight: 500;
+    font-size: 1.75em;
+    opacity: 1;
+}
+
+#quote-author {
+    font-family: "Raleway", sans-serif;
+    font-weight: 400;
+    color: rgb(44, 62, 80);
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    vertical-align: baseline;
+    position: relative;
+    z-index: 2;
+    width: 450px;
+    height: auto;
+    clear: both;
+    padding-top: 20px;
+    font-size: 1em;
+    text-align: right;
+    opacity: 1;
+}
+
+.buttons {
+    color: rgb(44, 62, 80);
+    padding: 0;
+    list-style: none;
+    vertical-align: baseline;
+    position: relative;
+    margin: auto;
+}
+
+#new-quote {
+    float: right;
+    height: 38px;
+    border: none;
+    border-radius: 3px;
+    color: #fff;
+    background-color: #333;
+    outline: none;
+    font-size: 0.85em;
+    padding: 8px 18px 6px 18px;
+    margin-top: 30px;
+    opacity: 1;
+    cursor: pointer;
+    background-color: rgb(44, 62, 80);
+}
+
+#tweet-quote {
+    list-style: none;
+    vertical-align: baseline;
+    border: none;
+    border-radius: 3px;
+    color: #fff;
+    outline: none;
+    margin-top: 30px;
+    opacity: 1;
+    cursor: pointer;
+    float: left;
+    padding-top: 8px;
+    text-align: center;
+    font-size: 1.2em;
+    margin-right: 5px;
+    height: 30px;
+    background-color: rgb(44, 62, 80);
+    text-decoration: none;
+}
